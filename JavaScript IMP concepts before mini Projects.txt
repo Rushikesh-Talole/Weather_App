@@ -1,0 +1,67 @@
+
+// this is for understanding how things are happening in this project.
+
+// const API_KEY = "d1845658f92b31c64bd94f06f7188c9c";
+// let city = 'goa';
+
+// function renderWeatherInfo(data) {
+//     let newPara = document.createElement('p');
+//     newPara.textContent = `${data?.main?.temp.toFixed(2)} °C`
+
+//     document.body.appendChild(newPara);
+// }
+
+// async function showWeather(){
+//     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`);
+//     const data = await response.json();
+
+//     console.log('weather data => ' , data);
+
+//     renderWeatherInfo(data);
+// }
+
+
+// //to get the weather based on the longitude and lattitude values.
+
+// async function getWeather(){
+
+//     try{
+//         let longitude = 16.333;
+//         let lattitude = 17.578;
+//         let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lattitude}&lon=${longitude}&appid=${API_KEY}&units=metric`);
+
+//         let data = await response.json();
+//         console.log('Weather Data ', data);
+//         renderWeatherInfo(data);
+//     }
+//     catch(e){
+//         console.log('Error hai ', e);
+//     }
+
+// }
+
+//generally this is not happens that one function will do allthings like getting response and rendering it on UI so generally one function will do only one thing so here getweather fun will only get the response and then store in tha data and the other function we will create and it works to render the content which we want to show on UI.
+
+
+// //geoLocation testing 
+// let element = document.querySelector('#para');
+// function getLocation(){
+//     if(navigator.geolocation){
+//         navigator.geolocation.getCurrentPosition(showPosition);
+//     }
+//     else{
+//         element.innerHTML = 'your browser not support geolocation';
+//     }
+// }
+
+// function showPosition(position){
+//     let lat = position.coords.latitude;
+//     let longi = position.coords.longitude;
+
+//     element.innerHTML = 'lattitude :- ' + lat + ' & longitute :- ' + longi;
+
+// }
+
+
+
+//actual code start from this.
